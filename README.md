@@ -21,29 +21,15 @@ To try this yourself first install python and pillow, if you dont know how to do
 7. open the file result to see the converted image
 
 ## Runtimes compared to image sizes
-Runtime | Image Height | Image Width
 
---------+--------------+-------------
-
-0.07283 | 10px         | 10px
-
---------+--------------+-------------
-
-0.02893 | 50px         | 100px
-
---------+--------------+-------------
-
-0.06087 | 100px        | 200px
-
---------+--------------+-------------
-
-0.06087 | 100px        | 200px
-
---------+--------------+-------------
-
-0.81083 | 635px        | 1200px
-
---------+--------------+-------------
+1. 10px by 10px
+  - 0.07283
+2. 100px by 50px
+  - 0.02893
+3. 200px by 100px
+  - 0.06087
+4. 1200px by 635px (original image size)
+  - 0.81083
 
 ## Future plans for project
 - [ ] Make it use more characters than just 1s and 0s (this will be done by color density)
