@@ -22,16 +22,27 @@ To try this yourself first install python and pillow, if you dont know how to do
 
 ## Runtimes compared to image sizes
 Runtime | Image Height | Image Width
+
 --------+--------------+-------------
+
 0.07283 | 10px         | 10px
+
 --------+--------------+-------------
+
 0.02893 | 50px         | 100px
+
 --------+--------------+-------------
+
 0.06087 | 100px        | 200px
+
 --------+--------------+-------------
+
 0.06087 | 100px        | 200px
+
 --------+--------------+-------------
+
 0.81083 | 635px        | 1200px
+
 --------+--------------+-------------
 
 ## Future plans for project
