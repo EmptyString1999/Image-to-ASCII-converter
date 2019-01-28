@@ -23,13 +23,13 @@ To try this yourself first install python and pillow, if you dont know how to do
 ## Runtimes compared to image sizes
 
 1. 10px by 10px
-       - 0.07283
+   - 0.07283
 2. 100px by 50px
-       - 0.02893
+   - 0.02893
 3. 200px by 100px
-       - 0.06087
+   - 0.06087
 4. 1200px by 635px (original image size)
-       - 0.81083
+   - 0.81083
 
 ## Future plans for project
 - [ ] Make it use more characters than just 1s and 0s (this will be done by color density)
