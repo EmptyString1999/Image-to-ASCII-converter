@@ -2,16 +2,12 @@ from __future__ import print_function
 from PIL import Image
 
 filename = "bird.jpg"
-size = (300, 100)
+size = (200, 100)
 
 im = Image.open(filename).convert('L')
-im.rotate(270).transpose(Image.FLIP_LEFT_RIGHT).resize(size).save("grayscale.png")
+im.rotate(270, expand=True).transpose(Image.FLIP_LEFT_RIGHT).resize(size[::-1]).save("grayscale.png")
 im.close()
 
-img = Image.open("grayscale.png")
-width, height = img.size
-img.crop((0 + width/4, 0, width - width / 4, height)).save("grayscale.png")
-img.close()
 img = Image.open("grayscale.png")
 width, height = img.size
 
@@ -20,17 +16,48 @@ width, height = img.size
 
 px = img.load()
 
+# binary mode 1s & 0s
+
+# file = open("Result.txt", "w")
+# prevX = 0
+# for x in range(width):
+#     for y in range(height):
+        
+#         if x > prevX:
+#             file.write("\n")
+#             prevX += 1
+#         else:
+#             if px[x, y] < 127:
+#                 txt = "0"
+#             else:
+#                 txt = "1"
+#             file.write(txt)
+
+
+
+# Attempt at ASCII mode
+
 file = open("Result.txt", "w")
 prevX = 0
 for x in range(width):
     for y in range(height):
-        
+
         if x > prevX:
             file.write("\n")
             prevX += 1
         else:
-            if px[x, y] < 127:
-                txt = "0"
-            else:
-                txt = "1"
+            if px[x, y] < 255 and px[x, y] > 225:
+                txt = '='
+            elif px[x, y] < 225 and px[x, y] > 195:
+                txt = ':'
+            elif px[x, y] < 195 and px[x, y] > 165:
+                txt = ';'
+            elif px[x, y] < 165 and px[x, y] > 105:
+                txt = '+'
+            elif px[x, y] < 105 and px[x, y] > 75:
+                txt = '$'
+            elif px[x, y] < 75 and px[x, y] > 45:
+                txt = '@'
+            elif px[x, y] < 45 and px[x, y] >= 0:
+                txt = '#'
             file.write(txt)
