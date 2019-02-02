@@ -14,11 +14,9 @@ To try this yourself first install python and pillow, if you dont know how to do
 ## How to use the converter
 1. Downlaod or clone the git page
 2. Once downloaded open the folder and place the image you want to convert in to the folder 
-3. Open the file called converter.py in IDLE or your prefered IDE
-4. On line 4 change the variable filename to the name of the image
-5. On line 5 chnage the numbers to the width and height of the image respectivley (you can also change this to smaller values for a smaller image)
-6. Run the file in either command line or through the IDE 
-7. open the file result to see the converted image
+3. Run the file called converter either through command line or your prefered IDE
+4. Enter name width and height of the image remebering to include the file extenison (e.g. bird.jpg)
+5. And you're done
 
 To see a before and after of the image open greyscale.png and the result.txt files 
 
@@ -34,7 +32,8 @@ To see a before and after of the image open greyscale.png and the result.txt fil
    - 0.81083
 
 ## Future plans for project
-- [ ] Make it use more characters than just 1s and 0s (this will be done by color density)
-- [ ] Add a propper interface rather than having users go through code
+- [x] Make it use more characters than just 1s and 0s (this will be done by color density)
+- [x] Add a propper interface rather than having users go through code
+- [ ] Add a GUI
 
 
