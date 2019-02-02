@@ -1,8 +1,10 @@
 from __future__ import print_function
 from PIL import Image
 
-filename = "bird.jpg"
-size = (200, 100)
+filename = input("Enter file name including extension: ")
+w = input("Enter width of final image: ")
+h = input("Enter height of final image: ")
+size = (int(w), int(h))
 
 im = Image.open(filename).convert('L')
 im.rotate(270, expand=True).transpose(Image.FLIP_LEFT_RIGHT).resize(size[::-1]).save("grayscale.png")
